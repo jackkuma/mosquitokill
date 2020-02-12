@@ -1,0 +1,41 @@
+body { margin: 0; padding: 0;}
+#mosquito {
+	position: absolute;
+	width: 10em;
+}
+#mosquito>img {width: 100%;height: auto;}
+a:hover, a:focus {
+	cursor: url('images/hand.svg');
+	height: 6em;
+	width: auto;
+}
+h1 { 
+	color: #ff5151;
+	font-size: 8em;
+	font-weight: 800;
+	position: relative;
+	margin: 30vh auto;
+	text-align: center;
+}
+#info {
+	background-color: #121212;
+	font-size: 2em;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-align: center;
+	padding: 0.3em;
+}
+#score-board { color:#ff2e63;}
+#info span {
+	background-color: #fff;
+	padding: 0.2em 1em;
+}
+#info span:first-child, #info span:nth-child(3)  {
+	background-color: #555;
+	color: #f6f6f6;
+	border-right:2px solid #eee;
+	border-radius: 0.5em 0 0 0.5em;
+}
+#info span:last-child, #info span:nth-child(2)  {
+	border-radius: 0 0.5em 0.5em 0;
+}
+#info span:nth-child(3) { margin-left: 1em;}
