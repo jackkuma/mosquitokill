@@ -1,13 +1,24 @@
-body { margin: 0; padding: 0;}
+body {
+	background: #ffc3a0;
+	background: -webkit-linear-gradient(to right, #ffc3a0, #feb47b);
+	background: linear-gradient(to right, #ffc3a0, #feb47b);
+	margin: 0; padding: 0;
+}
+#main{
+	cursor: -webkit-grab; cursor: grab;
+	position: relative;
+	width: 100vw;
+	height: calc(100vh - 60px);
+	overflow: hidden;
+}
+#main:active { cursor: -webkit-grabbing; cursor: grabbing;}
 #mosquito {
 	position: absolute;
-	width: 10em;
+	width: 9em;
 }
-#mosquito>img {width: 100%;height: auto;}
-a:hover, a:focus {
-	cursor: url('images/hand.svg');
-	height: 6em;
-	width: auto;
+#mosquito>img {
+	width: 100%;
+	height: auto;
 }
 h1 { 
 	color: #ff5151;
@@ -22,20 +33,18 @@ h1 {
 	font-size: 2em;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	text-align: center;
-	padding: 0.3em;
+	height: 60px;
 }
 #score-board { color:#ff2e63;}
 #info span {
 	background-color: #fff;
 	padding: 0.2em 1em;
 }
-#info span:first-child, #info span:nth-child(3)  {
+#info span:first-child, #info span:nth-child(3) {
 	background-color: #555;
 	color: #f6f6f6;
 	border-right:2px solid #eee;
-	border-radius: 0.5em 0 0 0.5em;
+	border-radius: 0 0 0 0.5em;
 }
-#info span:last-child, #info span:nth-child(2)  {
-	border-radius: 0 0.5em 0.5em 0;
-}
+#info span:last-child, #info span:nth-child(2) { border-radius: 0 0 0.5em 0;}
 #info span:nth-child(3) { margin-left: 1em;}
