@@ -8,25 +8,18 @@ const timer = setInterval(function() {
 
     if(document.getElementById('mosquito') === null && gameOver !== true) {
         mosquito.src= 'images/mosquito.svg';
-        const myscreenWidth = document.documentElement.clientWidth;
-        const myscreenHeight = document.documentElement.clientHeight;
-        let x = Math.floor(Math.random() * myscreenWidth);
-        let y = Math.floor(Math.random() * myscreenHeight);
-        //console.log(myscreenWidth);      
-
-        mosquito.style.top = y + 'px';
-        let outHeight = mosquito.offsetHeight;
-        if (outHeight > document.documentElement.clientHeight) {
-            mosquito.style.top = y - outHeight + 'px';
-        };
+        let x = Math.floor(Math.random() * window.innerWidth - 150);
+        let y = Math.floor(Math.random() * window.innerHeight - 150);
+        if (x < 0) {
+            x = 10;
+        } else if (y < 0) {
+            y = 10;
+        }
+        
         mosquito.style.left = x + 'px';
-        let outWidth = mosquito.offsetWidth;
-        if (outWidth > document.documentElement.clientWidth) {
-            mosquito.style.left = x - outWidth + 'px';
-        };
-
+        mosquito.style.top = y + 'px';
         mosquito.id = 'mosquito';
-        document.body.appendChild(mosquito);
+        document.getElementById('main').appendChild(mosquito);
     }
 
     countDown -= 1;
@@ -41,7 +34,7 @@ const timer = setInterval(function() {
 
 const disappear = setInterval(function() {
     if(document.getElementById('mosquito') !== null) {
-        document.body.removeChild(document.getElementById('mosquito'));
+        document.getElementById('main').removeChild(document.getElementById('mosquito'));
     }
 }, 3000);
 
